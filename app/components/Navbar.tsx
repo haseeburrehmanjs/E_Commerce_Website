@@ -1,23 +1,23 @@
-import Link from 'next/link'
-import React from 'react'
+export const Navbar = () => {
+  return (
+    <div className="w-full py-6">
+        <div className="container mx-auto flex justify-between items-center">
+            <h1>Exclusive</h1>
+            <ul className="flex items-center gap-10">
+                <li>Home</li>
+                <li>About</li>
+                <li>Sign Up</li>
+                <li>Contact</li>
+            </ul>
 
-const Navbar = () => {
-    return (
-        <>
-            <section className='bg-green-500 p-4 flex justify-between text-white items-center'>
-                <div className='text-2xl font-bold'>
-                    LOGO
+            <div className="flex items-center gap-10">
+                <input className="bg-gray-300 outline-none py-2 p-2 pl-2 rounded" type="text" placeholder="Search"/>
+                <div className="flex gap-5">
+                    <span>Icon</span>
+                    <span>Icon</span>
                 </div>
-                <div>
-                    <ul className='flex gap-5'>
-                        <li><Link href={'/'}>Home</Link></li>
-                        <li><Link href={'/about'}>About</Link></li>
-                        <li><Link href={'/contact'}>Contact</Link></li>
-                    </ul>
-                </div>
-            </section>
-        </>
-    )
+            </div>
+        </div>
+    </div>
+  )
 }
-
-export default Navbar
